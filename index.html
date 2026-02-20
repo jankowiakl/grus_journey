@@ -339,8 +339,8 @@
         <input id="fileInput" type="file" accept=".csv,text/csv,.txt,text/plain" />
 
         <div class="btnrow" style="margin-top:10px;">
-          <button id="loadExampleBtn" class="secondary" type="button">Load example data</button>
           <a href="example_data.csv" class="secondary" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:rgba(0,0,0,.20);color:var(--text);font-weight:800;letter-spacing:.2px;">Open example CSV</a>
+          <span class="miniNote" style="margin:0;">Example data loads automatically on page open.</span>
         </div>
         <div class="row">
           <div>
@@ -608,8 +608,7 @@
   const statusEl = el("status");
 
   const fileInput = el("fileInput");
-  const loadExampleBtn = el("loadExampleBtn");
-  const delimiterEl = el("delimiter");
+const delimiterEl = el("delimiter");
   const hasHeaderEl = el("hasHeader");
   const colIdEl = el("colId");
   const colTimeEl = el("colTime");
@@ -1461,25 +1460,13 @@
     if (!file) return;
     parseCSVFrom(file, { label: "file", autoApply: false });
   });
-
-  // Example data (for GitHub Pages / repository demo)
-  if (loadExampleBtn) {
-    loadExampleBtn.addEventListener("click", () => {
-      fileInput.value = ""; // keep UI consistent
-      resetAll();
-      parseCSVFrom("example_data.csv", { label: "example data", autoApply: true });
-    });
-  }
-
-  // Optional: auto-load example when URL contains ?demo=1 or ?example=1
-  window.addEventListener("DOMContentLoaded", () => {
-    const qs = new URLSearchParams(location.search);
-    if (qs.get("demo") === "1" || qs.get("example") === "1") {
-      if (loadExampleBtn) loadExampleBtn.click();
-    }
-  });
-
-  const buildGroups = () => {
+// Auto-load example_data.csv by default (when the page opens)
+window.addEventListener("DOMContentLoaded", () => {
+  fileInput.value = ""; // keep UI consistent
+  resetAll();
+  parseCSVFrom("example_data.csv", { label: "example data", autoApply: true });
+});
+const buildGroups = () => {
     grouped.clear();
 
     const idIdx = parseInt(colIdEl.value, 10);
