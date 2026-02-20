@@ -1460,6 +1460,7 @@ const delimiterEl = el("delimiter");
     if (!file) return;
     parseCSVFrom(file, { label: "file", autoApply: false });
   });
+<<<<<<< HEAD
 // Auto-load example_data.csv by default (when the page opens)
 window.addEventListener("DOMContentLoaded", () => {
   fileInput.value = ""; // keep UI consistent
@@ -1467,6 +1468,24 @@ window.addEventListener("DOMContentLoaded", () => {
   parseCSVFrom("example_data.csv", { label: "example data", autoApply: true });
 });
 const buildGroups = () => {
+=======
+
+  // Example data (for GitHub Pages / repository demo)
+  if (loadExampleBtn) {
+    loadExampleBtn.addEventListener("click", () => {
+      fileInput.value = ""; // keep UI consistent
+      resetAll();
+      parseCSVFrom("example_data.csv", { label: "example data", autoApply: true });
+    });
+  }
+
+// Auto-load example by default (when the page opens)
+window.addEventListener("DOMContentLoaded", () => {
+  if (loadExampleBtn) loadExampleBtn.click();
+});
+
+  const buildGroups = () => {
+>>>>>>> b6e6807ea15e9450b10824c30ac76957b07aafca
     grouped.clear();
 
     const idIdx = parseInt(colIdEl.value, 10);
