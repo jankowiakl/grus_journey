@@ -1471,13 +1471,10 @@
     });
   }
 
-  // Optional: auto-load example when URL contains ?demo=1 or ?example=1
-  window.addEventListener("DOMContentLoaded", () => {
-    const qs = new URLSearchParams(location.search);
-    if (qs.get("demo") === "1" || qs.get("example") === "1") {
-      if (loadExampleBtn) loadExampleBtn.click();
-    }
-  });
+// Auto-load example by default (when the page opens)
+window.addEventListener("DOMContentLoaded", () => {
+  if (loadExampleBtn) loadExampleBtn.click();
+});
 
   const buildGroups = () => {
     grouped.clear();
