@@ -23,8 +23,8 @@
       border-bottom:1px solid var(--border);
       display:flex; align-items:center; justify-content:space-between; gap:16px;
     }
-    header h1{ font-size:16px; font-weight:800; margin:0; letter-spacing:.2px; }
-    header .hint{ font-size:12px; color:var(--muted); margin:0; line-height:1.35; }
+    header h1{ font-size:18px; font-weight:800; margin:0; letter-spacing:.2px; }
+    header .hint{ font-size:14px; color:var(--muted); margin:0; line-height:1.35; }
 
     .wrap{
       display:grid;
@@ -71,7 +71,7 @@
       border:1px solid var(--border);
       background:rgba(0,0,0,.35);
       backdrop-filter:blur(8px);
-      font-size:12px;
+      font-size:14px;
       color:var(--text);
       pointer-events:none;
     }
@@ -91,12 +91,12 @@
       display:flex; align-items:center; justify-content:space-between;
       gap:10px; margin-bottom:10px;
     }
-    .panelHeader .title{ font-size:13px; font-weight:800; letter-spacing:.2px; }
-    .panelHeader .subtitle{ font-size:12px; color:var(--muted); margin-left:10px; font-weight:500; }
+    .panelHeader .title{ font-size:15px; font-weight:800; letter-spacing:.2px; }
+    .panelHeader .subtitle{ font-size:14px; color:var(--muted); margin-left:10px; font-weight:500; }
     .panelHeaderLeft{ display:flex; align-items:baseline; flex-wrap:wrap; }
 
     .row{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
-    label{ display:block; font-size:12px; color:var(--muted); margin-bottom:6px; }
+    label{ display:block; font-size:14px; color:var(--muted); margin-bottom:6px; }
 
     select, input[type="range"], input[type="number"], input[type="text"]{
       width:100%;
@@ -123,12 +123,12 @@
     button.secondary{ background:rgba(0,0,0,.20); }
     button.danger{ background:linear-gradient(180deg, rgba(255,107,107,.22), rgba(255,107,107,.08)); }
     button:disabled{ opacity:.55; cursor:not-allowed; }
-    button.tiny{ padding:8px 10px; border-radius:10px; font-weight:800; font-size:12px; }
+    button.tiny{ padding:8px 10px; border-radius:10px; font-weight:800; font-size:14px; }
 
     .btnrow{ display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
     .status{
       margin-top:10px;
-      font-size:12px;
+      font-size:14px;
       color:var(--muted);
       line-height:1.45;
       white-space:pre-wrap;
@@ -146,17 +146,17 @@
       padding-right:6px;
       margin-top:10px;
     }
-    #settingsCard label{ font-size:11px; margin-bottom:4px; }
+    #settingsCard label{ font-size:13px; margin-bottom:4px; }
     #settingsCard .panelHeader{ margin-bottom:8px; }
-    #settingsCard .panelHeader .title{ font-size:12px; }
-    #settingsCard .panelHeader .subtitle{ font-size:11px; }
+    #settingsCard .panelHeader .title{ font-size:14px; }
+    #settingsCard .panelHeader .subtitle{ font-size:13px; }
     #settingsCard .row{ gap:8px; margin-top:8px; }
     #settingsCard .btnrow{ gap:8px; margin-top:10px; }
     #settingsCard select, #settingsCard input[type="range"], #settingsCard input[type="number"], #settingsCard input[type="text"]{
-      padding:8px 8px; border-radius:10px; font-size:12px;
+      padding:8px 8px; border-radius:10px; font-size:14px;
     }
-    #settingsCard button{ padding:8px 10px; border-radius:10px; font-size:12px; }
-    #settingsCard button.tiny{ padding:6px 8px; border-radius:9px; font-size:11px; }
+    #settingsCard button{ padding:8px 10px; border-radius:10px; font-size:14px; }
+    #settingsCard button.tiny{ padding:6px 8px; border-radius:9px; font-size:13px; }
 
     .checkRow{
       display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-top:10px;
@@ -170,14 +170,14 @@
 
     .metaGrid{
       display:grid; gap:6px;
-      font-size:12px; color:var(--text);
+      font-size:14px; color:var(--text);
       text-align:center;
     }
-    .metaGrid b{ font-size:13px; }
+    .metaGrid b{ font-size:15px; }
     .metaGrid .muted{ color:var(--muted); }
-    #metaTime,#metaCoords{ font-size:20px; }
+    #metaTime,#metaCoords{ font-size:22px; }
 
-    .miniNote{ margin-top:6px; font-size:11px; color:var(--muted); line-height:1.35; }
+    .miniNote{ margin-top:6px; font-size:13px; color:var(--muted); line-height:1.35; }
 
     .leaflet-control-attribution, .leaflet-control-scale{
       background:rgba(0,0,0,.35) !important;
@@ -192,7 +192,7 @@
     /* Playback card */
     #playbackCard .row{ margin-top:8px; }
     #timelineWrap{ margin-top:10px; }
-    #timelineTime{ font-size:12px; color:var(--muted); margin-top:6px; text-align:center; }
+    #timelineTime{ font-size:14px; color:var(--muted); margin-top:6px; text-align:center; }
 
     /* ALL animation modal (bigger) */
     #allModal{
@@ -220,14 +220,22 @@
       display:grid;
       grid-template-rows:auto 1fr auto;
     }
+    /* Fullscreen toggle for ALL animation panel */
+    #allModalInner.fullscreen{
+      width:100vw;
+      height:100vh;
+      margin:0;
+      border-radius:0;
+    }
+
     #allModalHeader{
       display:flex; align-items:center; justify-content:space-between;
       padding:12px 14px;
       border-bottom:1px solid rgba(255,255,255,.10);
       gap:12px;
     }
-    #allModalHeader .title{ font-weight:900; font-size:13px; letter-spacing:.2px; }
-    #allModalHeader .sub{ font-size:12px; color:var(--muted); margin-left:10px; font-weight:600; }
+    #allModalHeader .title{ font-weight:900; font-size:15px; letter-spacing:.2px; }
+    #allModalHeader .sub{ font-size:14px; color:var(--muted); margin-left:10px; font-weight:600; }
 
     /* Map wrap to place overlay timestamp */
     #allMapWrap{ position:relative; }
@@ -249,7 +257,7 @@
       box-shadow:0 18px 45px rgba(0,0,0,.40);
       font-weight:950;
       letter-spacing:.2px;
-      font-size:22px;         /* <— larger timestamp */
+      font-size:24px;         /* <— larger timestamp */
       color:var(--text);
       white-space:nowrap;
     }
@@ -275,7 +283,7 @@
       border-radius:999px;
       border:1px solid var(--border);
       background:rgba(0,0,0,.18);
-      font-size:12px;
+      font-size:14px;
       color:var(--text);
       font-weight:800;
       white-space:nowrap;
@@ -283,7 +291,7 @@
 
     /* Make the time pill bigger too */
     #allTimeNow{
-      font-size:14px;
+      font-size:16px;
       padding:8px 12px;
       font-weight:950;
     }
@@ -340,7 +348,7 @@
 
         <div class="btnrow" style="margin-top:10px;">
           <button id="loadExampleBtn" class="secondary" type="button">Load example data</button>
-          <a href="example_data.csv" class="secondary" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:rgba(0,0,0,.20);color:var(--text);font-weight:800;letter-spacing:.2px;">Open example CSV</a>
+          <a id="saveExampleBtn" href="example_data.csv" download="example_data.csv" class="secondary" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:rgba(0,0,0,.20);color:var(--text);font-weight:800;letter-spacing:.2px;">Save example data</a>
         </div>
         <div class="row">
           <div>
@@ -533,6 +541,7 @@
         <span class="sub" id="allModalSub">—</span>
       </div>
       <div class="btnrow" style="margin-top:0;">
+        <button id="allFullscreenBtn" class="secondary tiny" type="button">Fullscreen</button>
         <button id="allCloseBtn" class="secondary tiny" type="button">Close</button>
       </div>
     </div>
@@ -655,7 +664,9 @@
 
   // ALL modal
   const allModal = el("allModal");
+  const allModalInner = el("allModalInner");
   const allCloseBtn = el("allCloseBtn");
+  const allFullscreenBtn = el("allFullscreenBtn");
   const allModalSub = el("allModalSub");
   const allStatsEl = el("allStats");
   const allTimeNowEl = el("allTimeNow");
@@ -1659,6 +1670,10 @@
     if (!ids.length) return;
 
     allModal.classList.add("show");
+
+    // Reset fullscreen state on open
+    try { if (allModalInner) allModalInner.classList.remove("fullscreen"); } catch(e) {}
+    try { if (allFullscreenBtn) allFullscreenBtn.textContent = "Fullscreen"; } catch(e) {}
     fillBasemapMirror();
     allBasemapMirrorEl.value = basemapSelectEl.value || "osmStd";
 
@@ -1753,9 +1768,24 @@ allProgress = 0;
   const closeAllModal = () => {
     stopAllAnim();
     allModal.classList.remove("show");
+    try { if (allModalInner) allModalInner.classList.remove("fullscreen"); } catch(e) {}
+    try { if (allFullscreenBtn) allFullscreenBtn.textContent = "Fullscreen"; } catch(e) {}
+    refreshMapSizes();
   };
 
   allCloseBtn.addEventListener("click", closeAllModal);
+
+  // Fullscreen toggle for ALL panel
+  const setAllFullscreen = (fs) => {
+    try { if (allModalInner) allModalInner.classList.toggle("fullscreen", !!fs); } catch(e) {}
+    try { if (allFullscreenBtn) allFullscreenBtn.textContent = fs ? "Exit full screen" : "Fullscreen"; } catch(e) {}
+    refreshMapSizes();
+  };
+  if (allFullscreenBtn) allFullscreenBtn.addEventListener("click", () => {
+    const fs = allModalInner && allModalInner.classList.contains("fullscreen");
+    setAllFullscreen(!fs);
+  });
+
   allModal.addEventListener("click", (e) => { if (e.target === allModal) closeAllModal(); });
 
   // Fit / auto-fit controls
